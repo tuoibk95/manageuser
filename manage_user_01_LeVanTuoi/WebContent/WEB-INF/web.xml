@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://xmlns.jcp.org/xml/ns/javaee" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd" id="WebApp_ID" version="3.1">
+  <display-name>manage_user_01_LeVanTuoi</display-name>
+  <welcome-file-list>
+    <welcome-file>JSP/ADM001.jsp</welcome-file>
+  </welcome-file-list>
+  <session-config>
+    <session-timeout>5</session-timeout>
+  </session-config>
+  <servlet>
+    <servlet-name>Login</servlet-name>
+    <servlet-class>manageuser.controllers.LoginController</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>Login</servlet-name>
+    <url-pattern>/Login.do</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <servlet-name>ListUser</servlet-name>
+    <servlet-class>manageuser.controllers.ListUserController</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>ListUser</servlet-name>
+    <url-pattern>/ListUser.do</url-pattern>
+  </servlet-mapping>
+  <servlet>
+   		<servlet-name>Logout</servlet-name>
+    	<servlet-class>manageuser.controllers.LogoutController</servlet-class>
+  	</servlet>
+  	<servlet-mapping>
+    	<servlet-name>Logout</servlet-name>
+    	<url-pattern>/Logout</url-pattern>
+  	</servlet-mapping>
+  	
+  	<servlet>
+   		<servlet-name>ADM002</servlet-name>
+    	<jsp-file>/JSP/ADM002.jsp</jsp-file>
+  	</servlet>
+  	<servlet-mapping>
+    	<servlet-name>ADM002</servlet-name>
+    	<url-pattern>/ListUser</url-pattern>
+  	</servlet-mapping>
+  	
+  	<servlet>
+   		<servlet-name>ADM001</servlet-name>
+    	<jsp-file>/JSP/ADM001.jsp</jsp-file>
+  	</servlet>
+  	<servlet-mapping>
+    	<servlet-name>ADM001</servlet-name>
+    	<url-pattern>/Login</url-pattern>
+  	</servlet-mapping>
+  	
+  	<servlet>
+   		<servlet-name>ADD</servlet-name>
+    	<jsp-file>/JSP/ADM003.jsp</jsp-file>
+  	</servlet>
+  	<servlet-mapping>
+    	<servlet-name>ADD</servlet-name>
+    	<url-pattern>/AddUserInput</url-pattern>
+  	</servlet-mapping>
+  	
+  	<servlet>
+   		<servlet-name>ADM003</servlet-name>
+   		<servlet-class>manageuser.controllers.AddUserInputController</servlet-class>
+  	</servlet>
+  	<servlet-mapping>
+    	<servlet-name>ADM003</servlet-name>
+    	<url-pattern>/AddUserInput.do</url-pattern>
+  	</servlet-mapping>
+  	
+  	<servlet>
+   		<servlet-name>error</servlet-name>
+    	<jsp-file>/JSP/System_Error.jsp</jsp-file>
+  	</servlet>
+  	<servlet-mapping>
+    	<servlet-name>error</servlet-name>
+    	<url-pattern>/error</url-pattern>
+  	</servlet-mapping>
+</web-app>
